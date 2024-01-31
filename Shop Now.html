@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Now</title>
+    <style>
+         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           
+        }
+        .main {
+            display: flex;
+            padding: 20px 50px;
+            margin: 10px 20px;
+        }
+        .logo {
+            margin: 5px 10px;
+            cursor: pointer;
+            line-height: 40px;
+            color: #000;
+        }
+        ul {
+            display: flex;
+            margin: 20px;
+        }
+        li {
+            list-style-type: none;
+            margin: 30px 80px;
+            text-align: center;
+        }
+        a {
+            color: #000;
+            display: inline;
+            text-decoration: none;
+            text-transform: uppercase;
+            position: relative;
+        }
+        li a::after {
+            content: "";
+            height: 3px;
+            width: 0;
+            background: #000;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+        li a:hover::after {
+            width: 100%;
+        }
+        hr  {
+           background: #c6c5de;
+           height: 1px;
+        }
+           button {
+            height: 30px;
+            padding: 0px 20px;
+            border-radius: 25px;
+            color: #fff;
+            background: #000;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: transparent;
+            color: #000;
+        }
+        .background {
+            background-color: #ccc;
+            padding: 40px;
+        }
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: center;
+            width: 180px;
+        }
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+        .gallery a img {
+              width: 180px;
+              height: 200px;
+              border-radius: 25px;
+        }
+        .desc {
+            text-align: center;
+            padding: 15px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 300px auto;
+            grid-template-rows: 650;
+            gap: 1px;
+        }
+        #style {
+            padding: 4px;
+            padding-right: 80px;
+            margin: 10px;
+            border-radius: 25px;
+        }
+        #color{
+            padding: 4px;
+            padding-right: 105px;
+            margin: 10px;
+            border-radius: 25px;
+        }
+        #size {
+            padding: 4px;
+            padding-right: 72px;
+            margin: 10px;
+            border-radius: 25px;
+        }
+        #brand {
+            padding: 4px;
+            padding-right: 105px;
+            margin: 10px;
+            border-radius: 25px;
+        }
+        .table {
+            display: flex;
+        }
+        .snow {
+            display: flex;
+            padding: 50px 50px 10px 50px;
+            margin-left:250px;
+        }
+        .froze {
+            display: flex;
+            padding: 40px 50px;
+            margin-left:250px
+        }
+        .table .gallery {
+            margin: 0px 35px;
+            border-radius: 25px;
+        }
+        .snow .gallery {
+            margin: 0px 35px;
+            border-radius: 25px;
+        }
+        .froze .gallery {
+            margin: 0px 35px;
+            border-radius: 25px;
+        }
+        .col2 button {
+            margin: 20px 30px;
+        }
+        .new {
+            display: flex;
+            margin: 50px 0px;
+            padding:20px 50px ;
+            background-color: #c6c5de;
+        }
+        .new .paragraph {
+            padding: 50px;
+        }
+        .footer {
+            background: #c6c5de;
+        }
+        .footer {
+            display: flex;
+        }
+        .after {
+            padding: 40px 0px 40px 250px ;
+        }
+
+        .menu-icon {
+            width: 28px; 
+            height: 28px;
+            margin-right: 20px;
+            display: none;
+            
+        }
+        @media only screen and (max-width:900px){
+            .main {
+                display: block;
+            }
+            .links ul  {
+                display: list-item;
+                width: 200px;
+                height: 300px;
+                background-color: #c6c5de;
+                text-align: right;
+            }
+            .links ul li {
+                padding-top: 15px;
+                padding-right: 20px;
+
+            }
+            .logo h1 {
+                margin: 10px 0px;
+                font-size: medium;
+                line-height: 25px;
+            }
+            .grid {
+                display: block;
+            }
+            .col2 button {
+                margin: 0px;
+            }
+            .col3 {
+                display: inline-block;
+                margin-left: 90px;
+            }
+            .table {
+                display: block;
+                margin: 5px 1px 5px 2px;
+            }
+            .snow {
+                display: block;
+                margin-left:10px ;
+            }
+            .froze {
+                display: block;
+                margin: 5px 0px;
+            }
+            .new {
+                display: block;
+            }
+            div.gallery {
+                margin: 10px;
+                border: 1px solid #ccc;
+                float: center;
+                width: 300px;
+            }
+            .gallery a img {
+              width: 300px;
+              height: 300px;
+              border-radius: 25px;
+            }
+            .footer ul {
+                display: inline-block;
+            }
+            .after {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="logo"><h1>Find<br>Cool Kicks</h1></div>
+        <img src="burger-bar.png" class="menu-icon" onclick="menutoggle()">
+        <div class="links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="Shop Now.html">Shop Now</a></li>
+                <li><a href="about us.html">About Us</a></li>
+            </ul>
+        </div>
+         
+    </div>
+    <hr>
+    <div class="background">
+        <h1>Popular Shoes Styles</h1>
+    </div>
+    <hr>
+    <div class="grid">
+        <div class="col1">
+            <h3>Filter</h3>
+        </div>
+        <div class="col2">
+            <button>Sneakers</button>
+            <button>Sandals</button>
+            <button>Boots</button>
+            <button>Slippers</button>
+        </div>
+        <div class="col3">
+            <select name="style" id="style">
+                <option value="style">Style</option>
+                <option value="modern">Modern</option>
+                <option value="decent">Decent</option>
+                <option value="Formal">Formal</option>
+                <option value="fashioned">Fashioned</option>
+            </select>
+            <br>
+            <select name="size" id="size">
+                <option value="size">Sizes</option>
+                <option value="kids">Kids size</option>
+                <option value="male">Male size</option>
+                <option value="female">Female size</option>
+                <option value="boys">Boy size</option>
+                <option value="girls">Girl size</option>
+            </select>
+            <br>
+            <select name="color" id="color">
+                <option value="color">Color</option>
+                <option value="Red">Red</option>
+                <option value="green">Green</option>
+                <option value="yellow">Yellow</option>
+                <option value="blue">Blue</option>
+            </select>
+            <br>
+            <select name="brand" id="brand">
+                <option value="brand">Brand</option>
+            </select>
+            </div>
+    <div class="table">   
+    <div class="gallery">
+        <a  target="blank" href="">
+            <img src="domino-164_6wVEHfI-unsplash.jpg" alt="red shoe">
+        </a>
+        <div class="desc"><h3>Kids Sneakers</h3>
+        <button>30$</button></div>
+    </div>
+    <div class="gallery">
+        <a  target="blank" href="">
+            <img src="fachry-zella-devandra-KvRy5S8hKPw-unsplash.jpg" alt="red shoe">
+        </a>
+        <div class="desc"><h3>Kids Sandals</h3>
+        <button>20$</button></div>
+    </div>
+    <div class="gallery">
+        <a  target="blank" href="">
+            <img src="hermes-rivera-w83s82yd3Fk-unsplash.jpg" alt="red shoe">
+        </a>
+        <div class="desc"><h3>Kids Boots</h3>
+        <button>40$</button></div>
+    </div>
+    <div class="gallery">
+        <a  target="blank" href="">
+            <img src="linda-xu-fUEP0djb1hA-unsplash.jpg" alt="red shoe">
+        </a>
+        <div class="desc"><h3>Kids Slippers</h3>
+        <button>15$</button></div>
+    </div>
+    </div>
+    <div class="snow">
+    <div class="gallery">
+        <a  target="blank" href="">
+            <img src="luis-felipe-lins-LG88A2XgIXY-unsplash.jpg" alt="red shoe">
+        </a>
+        <div class="desc"><h3>Kids Shoes</h3>
+        <button>25$</button></div>
+    </div>
+    <div class="gallery">
+        <a  target="blank" href="">
+            <img src="maksim-larin-ezdrvzA1hZw-unsplash.jpg" alt="red shoe">
+        </a>
+        <div class="desc"><h3>Colourful Shoes</h3>
+        <button>Buy Now</button></div>
+    </div>
+    <div class="gallery">
+        <a  target="blank" href="">
+            <img src="maksim-larin-NOpsC3nWTzY-unsplash.jpg" alt="red shoe">
+        </a>
+        <div class="desc"><h3>Light-up Shoes</h3>
+        <button>Buy Now</button></div>
+    </div>
+    <div class="gallery">
+        <a  target="blank" href="">
+            <img src="mnz-OJTNpLmsSHs-unsplash.jpg" alt="red shoe">
+        </a>
+        <div class="desc"><h3>Sports Shoes</h3>
+        <button>Buy Now</button></div>
+    </div>
+    </div>
+    <br>
+    <div class="froze">
+    <div class="gallery">
+        <a  target="blank" href="">
+            <img src="mostafa-mahmoudi-3OZr-hLbsq0-unsplash.jpg" alt="red shoe">
+        </a>
+        <div class="desc"><h3>Sandals</h3>
+        <button>Buy Now</button></div>
+    </div>
+    <div class="gallery">
+        <a  target="blank" href="">
+            <img src="omar-prestwich-jLEGurepDco-unsplash.jpg" alt="red shoe">
+        </a>
+        <div class="desc"><h3>Boots</h3>
+        <button>Buy Now</button></div>
+    </div>
+    <div class="gallery">
+        <a  target="blank" href="">
+            <img src="paul-volkmer-updW-QUccFE-unsplash.jpg" alt="red shoe">
+        </a>
+        <div class="desc"><h3>Slip-on Shoes</h3>
+        <button>Buy Now</button></div>
+    </div> 
+    <div class="gallery">
+        <a  target="blank" href="">
+            <img src="solesavy-LgzM6R0ojoE-unsplash.jpg" alt="red shoe">
+        </a>
+        <div class="desc"><h3>Rain Shoes</h3>
+        <button>Buy Now</button></div>
+    </div> 
+</div>
+</div>
+<div class="new">
+      <div class="paragraph">
+        <h1>Checkout our latest</h1>
+        <p>Discover a wide range of shoes for kids on kidkicks.From colorful sneakers to light-up shoes,we have a shoe for every occasion.
+        Our shoes are designed with comfort and style in mind, ensuring your child's feet are happy all day long.Shop now and gives your little
+        the perfect pair of shoes. </p>
+      </div>
+      <div class="table">
+        <div class="gallery">
+            <a  target="blank" href="">
+                <img src="taylor-smith-aDZ5YIuedQg-unsplash.jpg" alt="red shoe">
+            </a>
+            <div class="desc">
+            <button>Buy Now</button>
+            <h3>Boat Shoes</h3>
+            </div>
+        </div>
+      </div>
+</div>
+<footer>
+    <div class="footer">
+        <div class="last">
+            <h2>Find <br> Cool Kicks</h2>
+        </div>
+        <div class="bottom">
+            <ul>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Facebook</li>
+            </ul>
+        </div>
+        <div class="after">
+          <h4>KidsKicks 2024</h4>
+        </div>
+    </div>
+</footer>   
+</body>
+</html>

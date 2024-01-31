@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style> body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       
+    }
+    .main {
+        display: flex;
+        padding: 20px 50px;
+        margin: 10px 20px;
+    }
+    .logo {
+        margin: 5px 10px;
+        cursor: pointer;
+        line-height: 40px;
+        color: #000;
+    }
+    ul {
+        display: flex;
+        margin: 20px;
+    }
+    li {
+        list-style-type: none;
+        margin: 30px 80px;
+        text-align: center;
+    }
+    a {
+        color: #000;
+        display: inline;
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+    }
+    a::after {
+        content: "";
+        height: 3px;
+        width: 0;
+        background: #000;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+    }
+    a:hover::after {
+        width: 100%;
+    }
+    .about {
+        display: flex;
+    }
+    .us {
+        padding: 50px;
+    }
+    .img img {
+        width: 400px;
+        height: 400px;
+        padding: 50px;
+    }
+    .footer {
+            background: #c6c5de;
+        }
+        .footer {
+            display: flex;
+        }
+        .after {
+            padding: 40px 0px 40px 250px ;
+        }
+     
+    .menu-icon {
+            width: 28px; 
+            height: 28px;
+            
+        }
+        @media only screen and (max-width:900px){
+            .links ul  {
+                display: block;
+                width: 200px;
+                height: 300px;
+                background-color: #c6c5de;
+                text-align: right;
+
+            }
+            .links ul li {
+                padding-top: 15px;
+                padding-right: 20px;
+
+            }
+            .logo h1 {
+                margin: 10px 0px;
+                font-size: medium;
+                line-height: 25px;
+            }
+            .about {
+                display: block;
+            }
+            .img img {
+                padding: 30px;
+            }
+            .footer ul {
+                display: inline-block;
+            }
+            .after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="logo"><h1>Find<br>Cool Kicks</h1></div>
+        <img src="burger-bar.png" class="menu-icon"> 
+        <div class="links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="Shop Now.html">Shop Now</a></li>
+                <li><a href="about us.html">About Us</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="about">
+        <div class="us">
+            <h1>About Us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Nulla temporibus consectetur debitis quos. Quam rerum aperiam numquam 
+            placeat temporibus velit dolorem distinctio, recusandae reprehenderit, 
+            doloribus consectetur nemo dolor facilis nulla similique porro aliquam 
+            provident quibusdam. Aliquid mollitia, incidunt excepturi libero nulla 
+            quo odit? Corporis dolorum soluta quibusdam alias iure, error aliquam 
+            dignissimos modi praesentium blanditiis nam et commodi dolore est dicta 
+            libero possimus distinctio qui harum ex cupiditate. Sit fuga voluptatum,
+            hic in odit voluptates. Libero inventore nemo doloribus iure ut harum, 
+            dolores repellendus, autem deleniti minima fugiat architecto nesciunt 
+            aperiam quidem ratione ullam nulla neque, eius quasi incidunt labore.</p>
+        </div>
+        <div class="img">
+            <img src="trendest-studio-XZ3EmAIWuz0-unsplash.jpg" alt="">
+        </div>
+        <div class="video">
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="last">
+                <h2>Find <br> Cool Kicks</h2>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                </ul>
+            </div>
+            <div class="after">
+              <h4>KidsKicks 2024</h4>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
